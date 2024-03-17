@@ -6,27 +6,31 @@
     <title>My First Blog</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/blog.css">
     <link rel="stylesheet" href="./assets/css/form.css">
+    <link rel="stylesheet" href="./assets/css/blog.css">
 </head>
 <body>
     <header>
-
+        <h2>My First Blog</h2>
+        <img src="./assets/images/moon.png" id="toggleIcon">
     </header>
 
     <main>
         <aside>
-            <h2>My First Blog</h2>
+            <!-- <h2>My First Blog</h2> -->
+            <div>
+                <h3>Random Text</h3>
+            </div>
         </aside>
 
         <form id="blogForm">
             <label for="username">Username:</label>
-            <input type="text" name="username" id="username">
+            <input type="text" name="username" id="username" value="Yohannes">
             <label for="title">Blog Title:</label>
-            <input type="text" name="title" id="title">
+            <input type="text" name="title" id="title" value="Test">
             <label for="content">Content:</label>
             <textarea name="content" id="content" cols="30" rows="10"></textarea>
-            <button type="submit">Submit</button>
+            <button id="submit" type="submit" href="blog.html" >Submit</button>
         </form>
     </main>
 
