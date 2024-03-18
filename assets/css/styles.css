@@ -1,8 +1,11 @@
 
 header {
-    height: 50px;
+    height: 80px;
     width: 100%;
     background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 form {
@@ -18,15 +21,22 @@ form {
 aside {
     flex: 1;
     background-color: aquamarine;
+    position: relative;
+}
+
+aside div h3 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
 }
 
 main {
     display: flex;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 80px);
 }
 
 #toggleIcon {
-    width: 30px;
+    height: 40px;
     cursor: pointer;
 }
 
