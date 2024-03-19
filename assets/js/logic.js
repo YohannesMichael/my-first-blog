@@ -10,6 +10,5 @@ toggleIcon.addEventListener('click', function() {
         toggleIcon.src = './assets/images/sun.png';
     } else {
         toggleIcon.src = './assets/images/moon.png';
-        
     }
 })

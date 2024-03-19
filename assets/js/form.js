@@ -1,10 +1,10 @@
-// console.log(username);
+
 document.getElementById('submit').addEventListener('click', function(event) {
+    event.preventDefault();
     const submitEl = document.getElementById('submit');
     const username = document.getElementById('username').value;
     const blogTitle = document.getElementById('title').value;
     const content = document.getElementById('content').value;
-    event.preventDefault();
     console.log(username);
 
     const postData = {
@@ -12,8 +12,19 @@ document.getElementById('submit').addEventListener('click', function(event) {
         title: blogTitle,
         content: content
     }
+    localStorage.setItem('postData', JSON.stringify(postData));
+    console.log(JSON.parse(localStorage.getItem('postData')));
 
-    location.href = "blog.html"
+    // localStorage.setItem('username', username);
+    // localStorage.setItem('title', blogTitle);
+    // localStorage.setItem('content', content);
 
-    console.log(postData);
+    
+    // location.href = "blog.html"
+    // const usernameLocal = localStorage.getItem("username");
+    // const blogTitleLocal = localStorage.getItem("title");
+    // const contentLocal = localStorage.getItem("content");
+    
+    // console.log(usernameLocal, blogTitleLocal, contentLocal);
+    
 });
