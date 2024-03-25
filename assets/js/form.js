@@ -11,6 +11,13 @@ document.getElementById('submit').addEventListener('click', function(event) {
         alert('Mate you gotta fill out all the fields.');
         return;
     }
+
+    // Blog Post Object
+    const blogPost = {
+        username,
+        title: blogTitle,
+        content
+    };
 })
 
 
