@@ -18,7 +18,19 @@ document.getElementById('submit').addEventListener('click', function(event) {
         title: blogTitle,
         content
     };
-})
+
+    // Grab existing blog post from localStorage or create an empty array
+    let blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+    // Add the newly created blog post to the array
+    blogPosts.push(blogPost);
+
+    // Store the updated blog posts array in the users localStorage
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+
+    // redirect user to blog html page
+    location.href = 'blog.html';
+});
 
 
 
