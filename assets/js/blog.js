@@ -1,12 +1,29 @@
+// Retrieve existing blog posts from localStorage or create an empty array
+const blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
 
+// grabbing the main element to append blog posts into
+const main = document.querySelector('main');
 
-// const username = localStorage.getItem("username");
-// const blogTitle = localStorage.getItem("title");
-// const content = localStorage.getItem("content");
+// creating a header element for blog post
+const blogHeader = document.createElement('h2');
+blogHeader.textContent = 'Blog Posts';
+main.appendChild(blogHeader);
 
-// console.log(username, blogTitle, content);
+// Looping through blog posts and creating elements for each post
+blogPosts.forEach(post => {
+    const postDiv = document.createElement('div');
 
-// const username = document.createElement('h2').textContent(localStorage.getItem('username'));
-// console.log(username);
-// const title = document.createElement('h3')
-// const content = document.createElement('p');
+    const title = document.createElement('h3');
+    title.textContent = post.title;
+    postDiv.appendChild(title);
+
+    const author = document.createElement('p');
+    author.textContent = `Author: ${post.username}`;
+    postDiv.appendChild(author);
+
+    const content = document.createElement('p');
+    content.textContent = post.content;
+    postDiv.appendChild(content);
+
+    main.appendChild(postDiv);
+});
