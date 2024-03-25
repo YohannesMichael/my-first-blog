@@ -4,7 +4,7 @@ document.getElementById('submit').addEventListener('click', function(event) {
     // Grab input values
     const username = document.getElementById('username').value;
     const blogTitle = document.getElementById('title').value;
-    const content = document.getElementById('title').value;
+    const content = document.getElementById('content').value;
 
     // No empty input check
     if (!username || !blogTitle || !content) {
